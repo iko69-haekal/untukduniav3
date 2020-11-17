@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import Admin from "../../../../components/admin";
-import JoditEditor from "jodit-react";
 import Axios from "axios";
 import { UploadOutlined } from "@ant-design/icons";
 import { useEffect } from "react";
 import { message, Button, Upload } from "antd";
 import { useRouter } from "next/router";
 import { api } from "../../../../config/urlapi";
+import dynamic from "next/dynamic";
+const importJodit = () => import("jodit-react");
+
+const JoditEditor = dynamic(importJodit, {
+  ssr: false,
+});
 const Ubah = ({ artikel }) => {
   const router = useRouter();
   const { id } = router.query;

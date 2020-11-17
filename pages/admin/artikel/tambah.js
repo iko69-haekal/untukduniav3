@@ -1,10 +1,16 @@
 import { useState } from "react";
 import { UploadOutlined } from "@ant-design/icons";
 import Admin from "../../../components/admin";
-import JoditEditor from "jodit-react";
+
 import Axios from "axios";
 import { message, Button, Upload } from "antd";
 import { useRouter } from "next/router";
+import dynamic from "next/dynamic";
+const importJodit = () => import("jodit-react");
+
+const JoditEditor = dynamic(importJodit, {
+  ssr: false,
+});
 const Tambah = () => {
   const [content, setContent] = useState("");
   const [title, setTitle] = useState("");
