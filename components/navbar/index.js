@@ -12,7 +12,7 @@ const Navbar = () => {
       >
         <div className="container">
           <Image
-            src="/logo1.png"
+            src="/log.png"
             width="150"
             height="53"
             className="d-inline-block align-top"
