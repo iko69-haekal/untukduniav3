@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-  "dev": "node server.js",
-  "build": "next build",
-  "start": "SET NODE_ENV=production pm2 node server.js",
-  "export": "next export"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "antd": "^4.8.3",
