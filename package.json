@@ -8,10 +8,8 @@
     "start": "set NODE_ENV=production&&node server.js"
   },
   "dependencies": {
-    "@zeit/next-sass": "^1.0.1",
     "antd": "^4.8.3",
     "axios": "^0.21.0",
-    "cacheable-response": "^2.1.8",
     "htmr": "^0.9.2",
     "jodit-react": "^1.0.66",
     "next": "10.0.1",
