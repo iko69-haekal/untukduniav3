@@ -1,0 +1,1 @@
+{"ast":null,"code":"var api = \"https://api.untukdunia.com/\";\nexport { api };","map":{"version":3,"sources":["C:/untukduniav3/config/urlapi.js"],"names":["api"],"mappings":"AAAA,IAAMA,GAAG,GAAG,6BAAZ;AACA,SAASA,GAAT","sourcesContent":["const api = \"https://api.untukdunia.com/\";\r\nexport { api };\r\n"]},"metadata":{},"sourceType":"module"}
