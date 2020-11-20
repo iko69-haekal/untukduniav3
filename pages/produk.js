@@ -3,9 +3,22 @@ import Image from "next/image";
 import Axios from "axios";
 import { api } from "../config/urlapi";
 import Footer from "../components/footer";
+import Head from "next/head";
 function product({ produk }) {
   return (
     <>
+      <Head>
+        <meta
+          name="description"
+          content="produk produk IOT berkualitas dari hasil karya para jenius siswa siswi smk wirabuana gemilang dengan dibantu oleh  para instruktur iot berkualitas"
+        />
+        <meta
+          property="og:description"
+          content="produk produk IOT berkualitas dari hasil karya para jenius siswa siswi smk wirabuana gemilang dengan dibantu oleh  para instruktur iot berkualitas"
+          key="ogdesc"
+        />
+        <title>produk</title>
+      </Head>
       <Navbar />
       <div className="container my-5">
         <div className="row mt-5">

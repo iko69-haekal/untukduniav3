@@ -19,7 +19,7 @@ const Contact = () => {
               className="content text-white"
               style={{ backgroundColor: "#67C15E" }}
             >
-              085715904647
+              +625814910369
             </span>
           </div>
           {/*  */}

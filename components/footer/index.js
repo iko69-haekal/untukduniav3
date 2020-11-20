@@ -13,10 +13,10 @@ const Footer = () => {
                 <br />
                 <br />
                 <p className="text-white">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt
-                  consequuntur praesentium tempore libero necessitatibus eos
-                  similique officia, obcaecati molestiae temporibus? Nobis
-                  eveniet sed, est odio eius in ipsa consequatur quod!
+                  Untuk dunia hadir sebagai organisasi berorientasi profit tentu
+                  saja perusahaan ini akan dikelola secara profesional dan
+                  senantiasa mematuhi peraturan perundangan yang berlaku serta
+                  menjunjung tinggi nilai moral yang jujur dan amanah.
                 </p>
               </div>
               <div className="col-md-4 mb-4">
@@ -39,7 +39,7 @@ const Footer = () => {
                     </svg>
                     {`    `}
                   </span>
-                  085715904647
+                  +625814910369
                 </h6>
                 <h6 className="text-white">
                   <span>
@@ -58,7 +58,7 @@ const Footer = () => {
                     </svg>
                     {`  `}
                   </span>
-                  wirabuanaqot@gmail.com
+                  wirabuanaiot@gmail.com
                 </h6>
                 <h6 className="text-white">
                   <span>
@@ -81,7 +81,11 @@ const Footer = () => {
                     </svg>
                     {` `}
                   </span>
-                  kp bojong geder
+                  <p className="d-inline">
+                    {" "}
+                    Gedung smk wirabuana jl Camat Kanang RT.05/RW.07,Pabuaran,
+                    Kec. Bojong Gede, Bogor, Jawa Barat 16921
+                  </p>
                 </h6>
                 <div className="input-group mt-3" style={{ width: "90%" }}>
                   <input
@@ -115,7 +119,11 @@ const Footer = () => {
                 <div className="row mt-4">
                   <div className="col-2">
                     <div>
-                      <a className="d-inline" href="https://tokopedia.com">
+                      <a
+                        className="d-inline"
+                        target="_blank"
+                        href="https://www.tokopedia.com/untukdunia"
+                      >
                         <img
                           style={{ width: "46px" }}
                           src="/tokopedia.png"
@@ -128,7 +136,11 @@ const Footer = () => {
                   {/*  */}
                   <div className="col-2">
                     <div>
-                      <a className="d-inline" href="https://shopee.com">
+                      <a
+                        className="d-inline"
+                        target="_blank"
+                        href="https://shopee.co.id/untukdunia"
+                      >
                         <img
                           style={{ width: "46px" }}
                           src="/shopee.png"
@@ -141,7 +153,11 @@ const Footer = () => {
                   {/*  */}
                   <div className="col-1">
                     <div>
-                      <a className="d-inline" href="https://bukalapak.com">
+                      <a
+                        target="_blank"
+                        className="d-inline"
+                        href="https://www.bukalapak.com/u/untukdunia"
+                      >
                         <img
                           style={{ width: "46px" }}
                           src="/bukalapak.png"

@@ -69,10 +69,10 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item ml-1">
-                <Link href="/product">
+                <Link href="/produk">
                   <a
                     className={`nav-link  ${
-                      router.pathname == "/product" ? "active" : ""
+                      router.pathname == "/produk" ? "active" : ""
                     }`}
                     style={{ fontSize: "1rem" }}
                   >

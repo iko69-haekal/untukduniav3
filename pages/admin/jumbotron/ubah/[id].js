@@ -7,31 +7,23 @@ import Admin from "../../../../components/admin";
 import { api } from "../../../../config/urlapi";
 import { useRouter } from "next/router";
 
-const UbahGalery = ({ galery }) => {
+const ubahJmb = ({ image }) => {
   const router = useRouter();
   const { id } = router.query;
   const [loading, setLoading] = useState(false);
-  const [title, setTitle] = useState("");
-  const [image, setImage] = useState("");
-  const [link, setLink] = useState("");
+  const [images, setImages] = useState("");
+
   useEffect(() => {
-    setTitle(galery.image_title);
-    setImage(galery.image);
-    setLink(galery.article_link);
+    setImages(image.image);
   }, []);
   const submit = () => {
-    if (title.length < 5) {
-      message.error("title too short");
-      return false;
-    }
     setLoading(true);
     const form = new FormData();
-    form.append("image_title", title);
-    form.append("image", image);
-    form.append("old_pict", image);
-    form.append("article_link", link);
 
-    Axios.post(`${api}gallery/` + id, form, {
+    form.append("image", images);
+    form.append("old_pict", images);
+
+    Axios.post(`${api}image-management/images/` + id, form, {
       headers: {
         "content-type":
           "multipart/form-data; boundary=---011000010111000001101001",
@@ -53,26 +45,6 @@ const UbahGalery = ({ galery }) => {
         <div className="row justify-content-center mt-5 pt-5">
           <div className="col-md-6">
             <div class="form-group">
-              <label>Nama gambar</label>
-              <input
-                value={title}
-                type="text"
-                className="form-control"
-                placeholder="masukan nama gambar"
-                onChange={(e) => setTitle(e.target.value)}
-              />
-            </div>
-            <div class="form-group">
-              <label>link tujuan</label>
-              <input
-                value={link}
-                type="text"
-                className="form-control"
-                placeholder="masukan link tujuan"
-                onChange={(e) => setLink(e.target.value)}
-              />
-            </div>
-            <div class="form-group">
               <label>Gambar Produk: </label>
               <br />
               <Upload
@@ -81,7 +53,7 @@ const UbahGalery = ({ galery }) => {
                     message.error("file terlalu besar");
                     return false;
                   }
-                  setImage(file);
+                  setImages(file);
                   return false;
                 }}
               >
@@ -97,11 +69,11 @@ const UbahGalery = ({ galery }) => {
     </>
   );
 };
-UbahGalery.getInitialProps = async ({ query }) => {
+ubahJmb.getInitialProps = async ({ query }) => {
   const { id } = query;
-  let galery = await Axios.get(`${api}image-management/images` + id);
-  galery = galery.data.data;
-  return { galery: galery };
+  let image = await Axios.get(`${api}image-management/images/` + id);
+  image = image.data.data;
+  return { image: image };
 };
 
-export default UbahGalery;
+export default ubahJmb;

@@ -9,6 +9,16 @@ function Detail({ artikel }) {
     <>
       <Head>
         <meta name="description" content={artikel.article_sub_content} />
+        <meta
+          property="og:title"
+          content={artikel.artikel_title}
+          key="ogtitle"
+        />
+        <meta
+          property="og:description"
+          content={artikel.article_sub_content}
+          key="ogdesc"
+        />
         <title>{artikel.article_title}</title>
       </Head>
       <Navbar />

@@ -3,9 +3,22 @@ import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import Axios from "axios";
 import { api } from "../config/urlapi";
+import Head from "next/head";
 const galery = ({ galery }) => {
   return (
     <>
+      <Head>
+        <title>Galery</title>
+        <meta
+          name="description"
+          content="foto foto kegiatan siswa siswi berprestasi smk wirabuana gemilang"
+        />
+        <meta
+          property="og:description"
+          content="foto foto kegiatan siswa siswi berprestasi smk wirabuana gemilang"
+          key="ogdesc"
+        />
+      </Head>
       <Navbar />
       <div className="container pt-5 mt-4 mb-5 pb-5">
         <div className="row">

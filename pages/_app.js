@@ -11,9 +11,26 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta
+          name="description"
+          content=" Untuk dunia hadir sebagai organisasi berorientasi profit tentu
+              saja perusahaan ini akan dikelola secara profesional dan
+              senantiasa mematuhi peraturan perundangan yang berlaku serta
+              menjunjung tinggi nilai moral yang jujur dan amanah."
+        />
+        <meta
+          property="og:description"
+          content="foto foto kegiatan siswa siswi berprestasi smk wirabuana gemilang"
+          key="ogdesc"
+        />
+        <meta
+          name="keywords"
+          content="iot,smk,smk bisa,gemilang,untukdunia,wirabuana,untuk dunia,internet of things,door lock"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
         <title>
-          untuk dunia | website iot kumpulan hasil karya siswa siswi smk
-          wirabuana{" "}
+          website iot kumpulan hasil karya siswa siswi smk wirabuana{" "}
         </title>
         <link rel="icon" href="/favicon.ico" />
         <link

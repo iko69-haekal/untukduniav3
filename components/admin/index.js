@@ -109,9 +109,9 @@ const Admin = (props) => {
             >
               <div className="bg-white py-2 collapse-inner rounded">
                 <h6 className="collapse-header">Custom Template</h6>
-                <a className="collapse-item" href="utilities-color.html">
-                  Colors
-                </a>
+                <Link href="/admin/jumbotron">
+                  <a className="collapse-item">Jumbotron</a>
+                </Link>
               </div>
             </div>
           </li>

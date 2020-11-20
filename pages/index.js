@@ -1,18 +1,38 @@
 import Axios from "axios";
 import Head from "next/head";
 import Image from "next/image";
-import Carousel from "../components/carousel";
+import { Carousel } from "antd";
 import Contact from "../components/contact";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import { api } from "../config/urlapi";
 import "../styles/Home.module.css";
-export default function Home({ produk, galery }) {
+export default function Home({ produk, galery, jmb }) {
   return (
     <>
       <Head></Head>
       <Navbar />
-      <Carousel />
+      <Carousel autoplay>
+        {jmb.map((data) => {
+          return (
+            <>
+              <div>
+                <img
+                  style={{
+                    minHeight: "76vh",
+                    maxHeight: "86vh",
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                  src={data.image}
+                  alt="First slide"
+                />
+              </div>
+            </>
+          );
+        })}
+      </Carousel>
       <div className="container my-5">
         <h4 className="text-center">OUR PRODUCT</h4>
         <div className="row mt-5">
@@ -70,10 +90,13 @@ export default function Home({ produk, galery }) {
 Home.getInitialProps = async () => {
   let produk = await Axios.get(api + "product");
   let galery = await Axios.get(api + "gallery");
+  let jmb = await Axios.get(api + "image-management/images");
+  jmb = jmb.data.data;
   produk = produk.data.data;
   galery = galery.data.data;
   return {
     produk: produk.length <= 3 ? produk : produk.slice(0, 3),
     galery: galery.length <= 4 ? galery : galery.slice(0, 4),
+    jmb: jmb,
   };
 };
