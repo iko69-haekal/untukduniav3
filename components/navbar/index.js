@@ -92,6 +92,19 @@ const Navbar = () => {
                   </a>
                 </Link>
               </li>
+
+              <li className="nav-item ml-1">
+                <Link href="/contact">
+                  <a
+                    className={`nav-link  ${
+                      router.pathname == "/contact" ? "active" : ""
+                    }`}
+                    style={{ fontSize: "1rem" }}
+                  >
+                    Contact
+                  </a>
+                </Link>
+              </li>
             </div>
           </div>
         </div>

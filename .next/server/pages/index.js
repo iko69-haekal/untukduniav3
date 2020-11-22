@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 19);
+/******/ 	return __webpack_require__(__webpack_require__.s = 20);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -143,14 +143,6 @@ function withRouter(ComposedComponent) {
 
 /***/ }),
 
-/***/ 19:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("RNiq");
-
-
-/***/ }),
-
 /***/ "1ccW":
 /***/ (function(module, exports) {
 
@@ -173,6 +165,14 @@ function _extends() {
 }
 
 module.exports = _extends;
+
+/***/ }),
+
+/***/ 20:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("RNiq");
+
 
 /***/ }),
 
@@ -786,6 +786,18 @@ const Navbar = () => {
                   },
                   className: "jsx-3426207177" + " " + `nav-link  ${router.pathname == "/galery" ? "active" : ""}`,
                   children: "Galery"
+                })
+              })
+            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("li", {
+              className: "jsx-3426207177" + " " + "nav-item ml-1",
+              children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+                href: "/contact",
+                children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
+                  style: {
+                    fontSize: "1rem"
+                  },
+                  className: "jsx-3426207177" + " " + `nav-link  ${router.pathname == "/contact" ? "active" : ""}`,
+                  children: "Contact"
                 })
               })
             })]

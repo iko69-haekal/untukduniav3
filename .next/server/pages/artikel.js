@@ -736,6 +736,18 @@ const Navbar = () => {
                   children: "Galery"
                 })
               })
+            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("li", {
+              className: "jsx-3426207177" + " " + "nav-item ml-1",
+              children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+                href: "/contact",
+                children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
+                  style: {
+                    fontSize: "1rem"
+                  },
+                  className: "jsx-3426207177" + " " + `nav-link  ${router.pathname == "/contact" ? "active" : ""}`,
+                  children: "Contact"
+                })
+              })
             })]
           })
         })]

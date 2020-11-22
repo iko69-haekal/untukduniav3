@@ -17,6 +17,7 @@
   "/api/hello": "pages/api/hello.js",
   "/artikel/[id]": "pages/artikel/[id].js",
   "/artikel": "pages/artikel.js",
+  "/contact": "pages/contact.html",
   "/galery": "pages/galery.js",
   "/": "pages/index.js",
   "/login": "pages/login.html",

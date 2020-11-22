@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 21);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -168,7 +168,7 @@ module.exports = _extends;
 
 /***/ }),
 
-/***/ 21:
+/***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("p2U1");
@@ -653,6 +653,18 @@ const Navbar = () => {
                   },
                   className: "jsx-3426207177" + " " + `nav-link  ${router.pathname == "/galery" ? "active" : ""}`,
                   children: "Galery"
+                })
+              })
+            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("li", {
+              className: "jsx-3426207177" + " " + "nav-item ml-1",
+              children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+                href: "/contact",
+                children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
+                  style: {
+                    fontSize: "1rem"
+                  },
+                  className: "jsx-3426207177" + " " + `nav-link  ${router.pathname == "/contact" ? "active" : ""}`,
+                  children: "Contact"
                 })
               })
             })]
