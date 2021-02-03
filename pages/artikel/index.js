@@ -42,11 +42,9 @@ function artikel({ artikel }) {
     </>
   );
 }
-artikel.getInitialProps = async () => {
+export const getServerSideProps = async ({}) => {
   let artikel = await Axios.get(api + "article");
   artikel = artikel.data.data;
-  return {
-    artikel: artikel,
-  };
+  return { props: { artikel } };
 };
 export default artikel;

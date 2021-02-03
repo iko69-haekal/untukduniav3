@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 19);
+/******/ 	return __webpack_require__(__webpack_require__.s = 20);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -143,14 +143,6 @@ function withRouter(ComposedComponent) {
 
 /***/ }),
 
-/***/ 19:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("3KiW");
-
-
-/***/ }),
-
 /***/ "1ccW":
 /***/ (function(module, exports) {
 
@@ -176,11 +168,20 @@ module.exports = _extends;
 
 /***/ }),
 
+/***/ 20:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("3KiW");
+
+
+/***/ }),
+
 /***/ "3KiW":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("cDcd");
@@ -239,14 +240,15 @@ const galery = ({
   });
 };
 
-galery.getInitialProps = async () => {
+const getServerSideProps = async ({}) => {
   let galery = await axios__WEBPACK_IMPORTED_MODULE_4___default.a.get(_config_urlapi__WEBPACK_IMPORTED_MODULE_5__[/* api */ "a"] + "gallery");
   galery = galery.data.data;
   return {
-    galery: galery
+    props: {
+      galery
+    }
   };
 };
-
 /* harmony default export */ __webpack_exports__["default"] = (galery);
 
 /***/ }),

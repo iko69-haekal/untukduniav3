@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 16);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -143,7 +143,7 @@ function withRouter(ComposedComponent) {
 
 /***/ }),
 
-/***/ 16:
+/***/ 17:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("cM8A");
@@ -847,6 +847,7 @@ module.exports = require("react");
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("zr5I");
@@ -916,7 +917,7 @@ function Detail({
   });
 }
 
-Detail.getInitialProps = async ({
+const getServerSideProps = async ({
   query
 }) => {
   const {
@@ -925,10 +926,11 @@ Detail.getInitialProps = async ({
   let artikel = await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(_config_urlapi__WEBPACK_IMPORTED_MODULE_5__[/* api */ "a"] + "article/" + id);
   artikel = artikel.data.data;
   return {
-    artikel: artikel
+    props: {
+      artikel
+    }
   };
 };
-
 /* harmony default export */ __webpack_exports__["default"] = (Detail);
 
 /***/ }),

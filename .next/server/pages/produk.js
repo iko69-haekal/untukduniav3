@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 22);
+/******/ 	return __webpack_require__(__webpack_require__.s = 23);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -168,7 +168,7 @@ module.exports = _extends;
 
 /***/ }),
 
-/***/ 22:
+/***/ 23:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("p2U1");
@@ -2943,6 +2943,7 @@ function makePublicRouterInstance(router) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("Aiso");
@@ -3015,14 +3016,17 @@ function product({
   });
 }
 
-product.getInitialProps = async () => {
+const getServerSideProps = async ({
+  query
+}) => {
   let produk = await axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(_config_urlapi__WEBPACK_IMPORTED_MODULE_3__[/* api */ "a"] + "product");
   produk = produk.data.data;
   return {
-    produk: produk
+    props: {
+      produk
+    }
   };
 };
-
 /* harmony default export */ __webpack_exports__["default"] = (product);
 
 /***/ }),

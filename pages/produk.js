@@ -49,14 +49,14 @@ function product({ produk }) {
     </>
   );
 }
-product.getInitialProps = async () => {
+
+export const getServerSideProps = async ({ query }) => {
   let produk = await Axios.get(api + "product");
 
   produk = produk.data.data;
 
   return {
-    produk: produk,
+    props: { produk },
   };
 };
-
 export default product;

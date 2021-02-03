@@ -40,14 +40,14 @@ const galery = ({ galery }) => {
     </>
   );
 };
-galery.getInitialProps = async () => {
+
+export const getServerSideProps = async ({}) => {
   let galery = await Axios.get(api + "gallery");
 
   galery = galery.data.data;
 
   return {
-    galery: galery,
+    props: { galery },
   };
 };
-
 export default galery;

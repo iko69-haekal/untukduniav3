@@ -1,5 +1,6 @@
 {
   "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
   "/about": "pages/about.html",
   "/admin/artikel": "pages/admin/artikel.js",
   "/admin/artikel/tambah": "pages/admin/artikel/tambah.html",
@@ -23,6 +24,5 @@
   "/login": "pages/login.html",
   "/produk": "pages/produk.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
   "/404": "pages/404.html"
 }

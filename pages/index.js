@@ -10,7 +10,26 @@ import "../styles/Home.module.css";
 export default function Home({ produk, galery, jmb }) {
   return (
     <>
-      <Head></Head>
+      <Head>
+        <meta
+          name="description"
+          content=" Untuk dunia hadir sebagai organisasi berorientasi profit tentu
+              saja perusahaan ini akan dikelola secara profesional dan
+              senantiasa mematuhi peraturan perundangan yang berlaku serta
+              menjunjung tinggi nilai moral yang jujur dan amanah."
+        />
+        <meta
+          property="og:description"
+          content="foto foto kegiatan siswa siswi berprestasi smk wirabuana gemilang"
+          key="ogdesc"
+        />
+        <meta
+          name="keywords"
+          content="iot,smk,smk bisa,gemilang,untukdunia,wirabuana,untuk dunia,internet of things,door lock"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+      </Head>
       <Navbar />
       <Carousel autoplay>
         {jmb.map((data) => {
@@ -87,7 +106,7 @@ export default function Home({ produk, galery, jmb }) {
   );
 }
 
-Home.getInitialProps = async () => {
+export const getServerSideProps = async ({}) => {
   let produk = await Axios.get(api + "product");
   let galery = await Axios.get(api + "gallery");
   let jmb = await Axios.get(api + "image-management/images");
@@ -95,8 +114,10 @@ Home.getInitialProps = async () => {
   produk = produk.data.data;
   galery = galery.data.data;
   return {
-    produk: produk.length <= 3 ? produk : produk.slice(0, 3),
-    galery: galery.length <= 4 ? galery : galery.slice(0, 4),
-    jmb: jmb,
+    props: {
+      produk: produk.length <= 3 ? produk : produk.slice(0, 3),
+      galery: galery.length <= 4 ? galery : galery.slice(0, 4),
+      jmb: jmb,
+    },
   };
 };

@@ -56,11 +56,11 @@ function Detail({ artikel }) {
   );
 }
 
-Detail.getInitialProps = async ({ query }) => {
+export const getServerSideProps = async ({ query }) => {
   const { id } = query;
   let artikel = await Axios.get(api + "article/" + id);
   artikel = artikel.data.data;
-  return { artikel: artikel };
+  return { props: { artikel } };
 };
 
 export default Detail;

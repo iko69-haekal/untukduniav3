@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+/******/ 	return __webpack_require__(__webpack_require__.s = 21);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -168,7 +168,7 @@ module.exports = _extends;
 
 /***/ }),
 
-/***/ 20:
+/***/ 21:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("RNiq");
@@ -531,6 +531,7 @@ module.exports = require("next/dist/next-server/lib/router-context.js");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("zr5I");
@@ -563,7 +564,23 @@ function Home({
   jmb
 }) {
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_navbar__WEBPACK_IMPORTED_MODULE_7__["default"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(antd__WEBPACK_IMPORTED_MODULE_4__["Carousel"], {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+        name: "description",
+        content: " Untuk dunia hadir sebagai organisasi berorientasi profit tentu saja perusahaan ini akan dikelola secara profesional dan senantiasa mematuhi peraturan perundangan yang berlaku serta menjunjung tinggi nilai moral yang jujur dan amanah."
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+        property: "og:description",
+        content: "foto foto kegiatan siswa siswi berprestasi smk wirabuana gemilang"
+      }, "ogdesc"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+        name: "keywords",
+        content: "iot,smk,smk bisa,gemilang,untukdunia,wirabuana,untuk dunia,internet of things,door lock"
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1"
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+        charSet: "utf-8"
+      })]
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_navbar__WEBPACK_IMPORTED_MODULE_7__["default"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(antd__WEBPACK_IMPORTED_MODULE_4__["Carousel"], {
       autoplay: true,
       children: jmb.map(data => {
         return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
@@ -641,8 +658,7 @@ function Home({
     }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_contact__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_footer__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"], {})]
   });
 }
-
-Home.getInitialProps = async () => {
+const getServerSideProps = async ({}) => {
   let produk = await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(_config_urlapi__WEBPACK_IMPORTED_MODULE_8__[/* api */ "a"] + "product");
   let galery = await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(_config_urlapi__WEBPACK_IMPORTED_MODULE_8__[/* api */ "a"] + "gallery");
   let jmb = await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(_config_urlapi__WEBPACK_IMPORTED_MODULE_8__[/* api */ "a"] + "image-management/images");
@@ -650,9 +666,11 @@ Home.getInitialProps = async () => {
   produk = produk.data.data;
   galery = galery.data.data;
   return {
-    produk: produk.length <= 3 ? produk : produk.slice(0, 3),
-    galery: galery.length <= 4 ? galery : galery.slice(0, 4),
-    jmb: jmb
+    props: {
+      produk: produk.length <= 3 ? produk : produk.slice(0, 3),
+      galery: galery.length <= 4 ? galery : galery.slice(0, 4),
+      jmb: jmb
+    }
   };
 };
 
