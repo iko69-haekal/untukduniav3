@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -168,14 +168,6 @@ module.exports = _extends;
 
 /***/ }),
 
-/***/ 3:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("gfsY");
-
-
-/***/ }),
-
 /***/ "3WeD":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -236,6 +228,14 @@ function assign(target, ...searchParamsList) {
 /***/ (function(module, exports) {
 
 module.exports = require("next/router");
+
+/***/ }),
+
+/***/ 5:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("gfsY");
+
 
 /***/ }),
 
@@ -2895,7 +2895,7 @@ const Artikelmin = ({
             className: "col-md-6 col-12 mb-5",
             children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
               target: "_blank",
-              href: `/artikel/${data.id}`,
+              href: `/artikel/${data.slug}`,
               children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
                 className: "card clickable",
                 children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_image__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2930,7 +2930,7 @@ const Artikelmin = ({
               }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("button", {
                 onClick: e => {
                   e.preventDefault();
-                  history.push("/admin/artikel/ubah/" + data.id);
+                  history.push(`/admin/artikel/ubah/${data.slug}/${data.id}`);
                 },
                 className: "btn btn-primary",
                 children: "ubah"

@@ -4,9 +4,9 @@ import Navbar from "../../components/navbar";
 import Image from "next/image";
 import Axios from "axios";
 import { api } from "../../config/urlapi";
-import { useRouter } from "next/router";
+
+import Link from "next/link";
 function artikel({ artikel }) {
-  const router = useRouter();
   return (
     <>
       <Navbar />
@@ -15,24 +15,28 @@ function artikel({ artikel }) {
           {artikel.map((data, i) => {
             return (
               <div className="col-md-6 col-12 " key={i}>
-                <div
-                  className="card clickable"
-                  onClick={() => router.push("/artikel/" + data.id)}
-                >
-                  <Image
-                    className="card-img-top"
-                    src={data.image}
-                    alt={data.article_title}
-                    width="100%"
-                    height="200"
-                    unoptimized
-                  />
-                  <div className="card-body">
-                    <h5 style={{ fontSize: "16pt" }} className="card-title ">
-                      {data.article_title}
-                    </h5>
-                  </div>
-                </div>
+                <Link href={`/artikel/${data.slug}`}>
+                  <a>
+                    <div className="card ">
+                      <Image
+                        className="card-img-top"
+                        src={data.image}
+                        alt={data.article_title}
+                        width="100%"
+                        height="200"
+                        unoptimized
+                      />
+                      <div className="card-body">
+                        <h5
+                          style={{ fontSize: "16pt" }}
+                          className="card-title "
+                        >
+                          {data.article_title}
+                        </h5>
+                      </div>
+                    </div>
+                  </a>
+                </Link>
               </div>
             );
           })}

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+/******/ 	return __webpack_require__(__webpack_require__.s = 20);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -143,14 +143,6 @@ function withRouter(ComposedComponent) {
 
 /***/ }),
 
-/***/ 18:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("34Ye");
-
-
-/***/ }),
-
 /***/ "1ccW":
 /***/ (function(module, exports) {
 
@@ -176,6 +168,14 @@ module.exports = _extends;
 
 /***/ }),
 
+/***/ 20:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("34Ye");
+
+
+/***/ }),
+
 /***/ "34Ye":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -193,8 +193,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("zr5I");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _config_urlapi__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("hmj4");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("4Q3z");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("YFqc");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -209,7 +209,6 @@ __webpack_require__.r(__webpack_exports__);
 function artikel({
   artikel
 }) {
-  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_7__["useRouter"])();
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
     children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_navbar__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
       className: "container my-4",
@@ -218,26 +217,30 @@ function artikel({
         children: artikel.map((data, i) => {
           return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
             className: "col-md-6 col-12 ",
-            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
-              className: "card clickable",
-              onClick: () => router.push("/artikel/" + data.id),
-              children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_image__WEBPACK_IMPORTED_MODULE_4___default.a, {
-                className: "card-img-top",
-                src: data.image,
-                alt: data.article_title,
-                width: "100%",
-                height: "200",
-                unoptimized: true
-              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-                className: "card-body",
-                children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("h5", {
-                  style: {
-                    fontSize: "16pt"
-                  },
-                  className: "card-title ",
-                  children: data.article_title
+            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+              href: `/artikel/${data.slug}`,
+              children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
+                children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
+                  className: "card ",
+                  children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_image__WEBPACK_IMPORTED_MODULE_4___default.a, {
+                    className: "card-img-top",
+                    src: data.image,
+                    alt: data.article_title,
+                    width: "100%",
+                    height: "200",
+                    unoptimized: true
+                  }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+                    className: "card-body",
+                    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("h5", {
+                      style: {
+                        fontSize: "16pt"
+                      },
+                      className: "card-title ",
+                      children: data.article_title
+                    })
+                  })]
                 })
-              })]
+              })
             })
           }, i);
         })

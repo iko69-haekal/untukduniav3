@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 21);
+/******/ 	return __webpack_require__(__webpack_require__.s = 23);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -168,7 +168,7 @@ module.exports = _extends;
 
 /***/ }),
 
-/***/ 21:
+/***/ 23:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("RNiq");
@@ -570,7 +570,7 @@ function Home({
         content: " Untuk dunia hadir sebagai organisasi berorientasi profit tentu saja perusahaan ini akan dikelola secara profesional dan senantiasa mematuhi peraturan perundangan yang berlaku serta menjunjung tinggi nilai moral yang jujur dan amanah."
       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
         property: "og:description",
-        content: "foto foto kegiatan siswa siswi berprestasi smk wirabuana gemilang"
+        content: "Untuk dunia hadir sebagai organisasi berorientasi profit tentu saja perusahaan ini akan dikelola secara profesional dan senantiasa mematuhi peraturan perundangan yang berlaku serta menjunjung tinggi nilai moral yang jujur dan amanah."
       }, "ogdesc"), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
         name: "keywords",
         content: "iot,smk,smk bisa,gemilang,untukdunia,wirabuana,untuk dunia,internet of things,door lock"

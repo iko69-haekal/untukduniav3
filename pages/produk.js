@@ -24,7 +24,7 @@ function product({ produk }) {
         <div className="row mt-5">
           {produk.map((produk, i) => {
             return (
-              <div className="col-md-4 mb-3" key={i}>
+              <div className="col-md-5 mb-3" key={i}>
                 <div className="card">
                   <Image
                     className="card-img-top"

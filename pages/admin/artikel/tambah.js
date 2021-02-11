@@ -24,8 +24,8 @@ const Tambah = () => {
       message.error("title too short");
       return false;
     }
-    if (sub.length >= 40) {
-      message.error("subcontent max 40 char");
+    if (sub.length >= 5000) {
+      message.error("subcontent max 5000 char");
       return false;
     }
     setLoading(true);
@@ -71,7 +71,7 @@ const Tambah = () => {
           <div className="form-group">
             <label>subcontent</label>
             <textarea
-              maxLength={40}
+              maxLength={5000}
               type="text"
               className="form-control"
               value={sub}

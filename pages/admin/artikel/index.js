@@ -30,7 +30,7 @@ const Artikelmin = ({ artikel }) => {
           {artikel.map((data, i) => {
             return (
               <div className="col-md-6 col-12 mb-5" key={i}>
-                <a target="_blank" href={`/artikel/${data.id}`}>
+                <a target="_blank" href={`/artikel/${data.slug}`}>
                   <div className="card clickable">
                     <Image
                       className="card-img-top"
@@ -60,7 +60,9 @@ const Artikelmin = ({ artikel }) => {
                   <button
                     onClick={(e) => {
                       e.preventDefault();
-                      history.push("/admin/artikel/ubah/" + data.id);
+                      history.push(
+                        `/admin/artikel/ubah/${data.slug}/${data.id}`
+                      );
                     }}
                     className="btn btn-primary"
                   >

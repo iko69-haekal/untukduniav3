@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -168,7 +168,7 @@ module.exports = _extends;
 
 /***/ }),
 
-/***/ 20:
+/***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("3KiW");
@@ -203,19 +203,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const galery = ({
+function galery({
   galery
-}) => {
+}) {
   return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
     children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_head__WEBPACK_IMPORTED_MODULE_6___default.a, {
       children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("title", {
         children: "Galery"
       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
         name: "description",
-        content: "foto foto kegiatan siswa siswi berprestasi smk wirabuana gemilang"
+        content: "foto foto kegiatan siswa siswi berprestasi smk wirabuana gemilang dan cerdas untuk masa depan bangsa indonesia dengan mebuat teknologi yang berguna "
       }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
         property: "og:description",
-        content: "foto foto kegiatan siswa siswi berprestasi smk wirabuana gemilang"
+        content: "foto foto kegiatan siswa siswi berprestasi smk wirabuana gemilang dan cerdas untuk masa depan bangsa indonesia dengan mebuat teknologi yang berguna "
       }, "ogdesc")]
     }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_navbar__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
       className: "container pt-5 mt-4 mb-5 pb-5",
@@ -238,7 +238,7 @@ const galery = ({
       })
     }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_footer__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], {})]
   });
-};
+}
 
 const getServerSideProps = async ({}) => {
   let galery = await axios__WEBPACK_IMPORTED_MODULE_4___default.a.get(_config_urlapi__WEBPACK_IMPORTED_MODULE_5__[/* api */ "a"] + "gallery");

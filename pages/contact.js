@@ -6,8 +6,19 @@ import { useState } from "react";
 import TextArea from "antd/lib/input/TextArea";
 import Axios from "axios";
 import { api } from "../config/urlapi";
-import Image from "next/image";
+import Head from "next/head";
+import Lottie from "react-lottie";
+import anim from "../public/contact.json";
+
 function Contact() {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: anim,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [messages, setMessages] = useState("");
@@ -34,10 +45,23 @@ function Contact() {
   };
   return (
     <>
+      <Head>
+        <meta
+          name="description"
+          content="Hubungi Kami. Kami ingin mendengar dari Anda! Masukan Anda sangat berharga dan akan memungkinkan kami untuk melayani kebutuhan Anda di masa depan"
+        />
+        <meta
+          property="og:description"
+          content="Hubungi Kami. Kami ingin mendengar dari Anda! Masukan Anda sangat berharga dan akan memungkinkan kami untuk melayani kebutuhan Anda di masa depan"
+          key="ogdesc"
+        />
+        <title>kontak kami | untukdunia</title>
+      </Head>
       <Navbar />
+
       <div className="container my-5">
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-6 pt-5 mt-4">
             <h2>Contact</h2>
 
             <Input
@@ -68,8 +92,9 @@ function Contact() {
               submit
             </Button>
           </div>
-          <div className="col-md-5 mbl-hide">
-            <img src="/human.png" style={{ width: "100%", height: "55vh" }} />
+          <div className="col-md-6 mbl-hide">
+            {/* <img src="/human.png" style={{ width: "100%", height: "55vh" }} /> */}
+            <Lottie options={defaultOptions} />
           </div>
         </div>
       </div>

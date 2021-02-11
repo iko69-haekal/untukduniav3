@@ -1,0 +1,1 @@
+{"ast":null,"code":"var _reactJsxRuntime = require(\"react/jsx-runtime\");\n\nfunction Error({}) {\n  return /*#__PURE__*/_reactJsxRuntime.jsx(\"p\", {\n    children: \"sedang maintenance\"\n  });\n}","map":null,"metadata":{},"sourceType":"script"}

@@ -4,18 +4,19 @@ import Navbar from "../components/navbar";
 import Axios from "axios";
 import { api } from "../config/urlapi";
 import Head from "next/head";
-const galery = ({ galery }) => {
+
+function galery({ galery }) {
   return (
     <>
       <Head>
         <title>Galery</title>
         <meta
           name="description"
-          content="foto foto kegiatan siswa siswi berprestasi smk wirabuana gemilang"
+          content="foto foto kegiatan siswa siswi berprestasi smk wirabuana gemilang dan cerdas untuk masa depan bangsa indonesia dengan mebuat teknologi yang berguna "
         />
         <meta
           property="og:description"
-          content="foto foto kegiatan siswa siswi berprestasi smk wirabuana gemilang"
+          content="foto foto kegiatan siswa siswi berprestasi smk wirabuana gemilang dan cerdas untuk masa depan bangsa indonesia dengan mebuat teknologi yang berguna "
           key="ogdesc"
         />
       </Head>
@@ -39,7 +40,7 @@ const galery = ({ galery }) => {
       <Footer />
     </>
   );
-};
+}
 
 export const getServerSideProps = async ({}) => {
   let galery = await Axios.get(api + "gallery");
